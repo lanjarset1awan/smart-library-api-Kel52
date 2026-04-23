@@ -76,9 +76,11 @@ export const BookModel = {
 
         const result = await pool.query(
             `UPDATE books 
-       SET title=$1, total_copies=$2 
-       WHERE id=$3 
-       RETURNING *`,
+         SET title = $1,
+             total_copies = $2,
+             available_copies = $2
+         WHERE id = $3
+         RETURNING *`,
             [title, total_copies, id]
         );
 
