@@ -32,7 +32,7 @@ export const LoanController = {
 
     async returnLoan(req, res) {
         try {
-            const { loan_id } = req.body; // ✅ pakai body
+            const { loan_id } = req.body;
 
             if (!loan_id) {
                 return res.status(400).json({
