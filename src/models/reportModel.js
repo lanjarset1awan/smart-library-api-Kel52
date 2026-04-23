@@ -2,7 +2,6 @@ import { pool } from '../config/db.js';
 
 export const ReportModel = {
 
-  // 📊 STATS UTAMA (WAJIB SESUAI TUGAS)
   async getStats() {
     const query = `
       SELECT
@@ -16,7 +15,6 @@ export const ReportModel = {
     return result.rows[0];
   },
 
-  // 🔥 BONUS (TOP BOOKS PALING SERING DIPINJAM)
   async getTopBooks() {
     const query = `
       SELECT 
